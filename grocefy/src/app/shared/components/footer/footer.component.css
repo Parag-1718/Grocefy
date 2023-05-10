@@ -1,0 +1,21 @@
+.a_style{
+    list-style-type: none;
+}
+.ceter_div{
+    display: block;
+    margin:2px auto;
+}
+i{
+    font-size: 25px;
+}
+
+.bgColor{
+    background-color: #d1e7dd;
+}
+.logo img{
+    height: 65px;
+ }
+ .logo p{
+    font-size: 25px;
+    margin-top: 25px;
+ }

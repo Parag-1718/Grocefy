@@ -1,0 +1,17 @@
+.wraaper{
+    width: 20vh;
+}
+
+
+
+.productImage{
+    object-fit: contain;
+    width: 100%;
+    height: 250px;
+}
+.conatiner{
+    width: 69vw;
+}
+carousel{
+    z-index: 50;    
+}

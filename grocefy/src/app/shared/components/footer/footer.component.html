@@ -1,0 +1,26 @@
+
+
+<footer class=" text-dark bgColor mt-5">
+    <div class="d-flex justify-content-center align-items-center">
+        <!-- <div> -->
+        <div class="my-2 d-flex logo justify-content-center">
+            <a class="navbar-brand fs-2 fw-bolder" href="#"><img src="assets/Grocefy_logo.png" alt="Logo" class="d-inline-block align-text-top"></a>
+        </div>
+    <ul *ngFor="let item of footer_items" class="my-3">
+        <li  class="a_style"><strong>{{item.f_item}}</strong> {{item.f_item_details}}</li>
+    </ul>
+    </div>
+    <!-- </div> -->
+    
+    <div class="d-flex justify-content-center">
+        <div >
+        <p>© 2023, All rights reserved</p>
+       </div>
+       <div>
+        <ul *ngFor="let item of social_accounts" class="d-inline-flex">
+            <li class="a_style"><a href="{{item.href}}" target="_blank"><i class="{{item.src}}"></i></a></li>
+        </ul>
+    </div>
+    </div>
+</footer>
+    

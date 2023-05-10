@@ -1,0 +1,8 @@
+.order ul{
+   display: flex;
+   list-style-type: none;
+}
+
+img{
+   max-width: 55px;
+}

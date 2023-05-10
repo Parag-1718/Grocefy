@@ -1,0 +1,87 @@
+<div class="card border-0 mt-3 bgImage">
+    <img src="assets/product_list_background.jpg" class="card-img">
+    <div class="card-img-overlay text-center my-3 d-flex justify-content-center align-items-center">
+        <div>
+            <p id="product_list_text" class="card-title fs-1 text-capitalize">Cart</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="container mt-5 my-5" *ngIf="dispalyEmplty">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 text-center">
+        <i class="fas fa-shopping-cart fa-5x mb-3"></i>
+        <h2>Your Cart is Empty</h2>
+        <p class="lead">Looks like you haven't added anything to your cart yet.</p>
+        <a routerLink="" class="btn btn-outline-primary">Continue Shopping</a>
+      </div>
+    </div>
+  </div>
+
+
+<div class="conatiner my-3">
+
+    <table class="table table-striped container" *ngIf="!dispalyEmplty">
+        <thead>
+            <tr>
+                <th scope="col">Item Description</th>
+                <th scope="col">Unit Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Sub Total</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cart of cartData;let i=index">
+                <td> <img src="{{cart.avatar_image}}" alt="Products" routerLink="/module/catalogue/product-details/{{cart.id}}">   {{cart.short_description}}</td>
+                <td>{{cart.amount |currency:'INR' }} </td>
+                <td>
+                    <div>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" (click)="quantity('min',cart)">-</button>
+                        <span class="mx-2"> {{cart.quantity}} </span>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" (click)="quantity('pluse',cart)">+</button>
+                    </div>
+                </td>
+                <td>{{cart.quantity * cart.amount | currency:"INR"}}</td>
+                <td>
+                    <button class="btn" (click)="removeItem(cart)">X</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<div class="summary text-capitalize conatiner" *ngIf="!dispalyEmplty">
+    <div class="row">
+        <div class="col-sm-9">
+            
+        </div>
+        <div class="col-sm-3">
+            
+            <ul>
+                <li class="mx-2">
+                    <span>amount: </span> <span> {{subtotal | currency:'INR'}}</span>
+                </li>
+                <li class="mx-2">
+                    <span>tax: </span> <span> {{text | currency:'INR'}}</span>
+                </li>
+                <li class="mx-2">
+                    <span>delivery: </span> <span> {{delivery | currency:'INR'}}</span>
+                </li>
+                <li class="mx-2">
+                    <span>discount: </span> <span> {{discount | currency:'INR'}}</span>
+                </li>
+                <hr>
+                <li class="mx-2">
+                    <span>total: </span> <span> {{totalPrice | currency:'INR'}}</span>
+                </li>
+                <button class="btn btn-outline-success my-3"  (click)="storeAmout()">checkout</button>
+            </ul>
+        </div>
+    </div>
+</div>

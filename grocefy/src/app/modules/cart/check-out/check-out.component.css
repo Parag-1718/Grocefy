@@ -1,0 +1,19 @@
+.address{
+    width: 25%;
+}
+
+.wraaper{
+    width: 20vh;
+}
+.cardImage{
+    width: 200px;
+    height: 250px;
+}
+
+input, label{
+    cursor: pointer;
+}
+
+input.ng-touched.ng-invalid{
+    box-shadow: rgba(248, 3, 3, 0.35) 0px 5px 15px;
+}

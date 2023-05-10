@@ -1,0 +1,30 @@
+.wraaper{
+    width: 20vh;
+}
+
+
+/* .card{
+    width: 20%;
+
+} */
+/* .card-img-overlay{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+} */
+
+/* .card .p{
+    font-size: 20px;
+} */
+
+
+.cardImage{
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+carousel{
+    z-index: 50;    
+}

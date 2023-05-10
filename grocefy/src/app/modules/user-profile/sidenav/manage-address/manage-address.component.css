@@ -1,0 +1,28 @@
+i{
+    font-size: 20px;
+}
+.card{
+    width: 300px;
+}
+
+.address{
+    margin-right: 100px;
+    margin-left: 0px;
+}
+
+/* .smallInput input{
+    width: 100px;
+} */
+
+form, .btn{
+    text-transform: capitalize;
+}
+
+input, textarea{
+    border-radius: 0px;
+    background-color: aliceblue;
+}
+
+input.ng-touched.ng-invalid{
+    box-shadow: rgba(248, 3, 3, 0.35) 0px 5px 15px;
+}
